@@ -1,2 +1,2 @@
 # lofi-fy
-penapps xxii: lofi-fy your music
+pennapps xxii: lofi-fy your music
