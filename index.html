@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Metadata for the Webpage -->
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+    <!-- Bootstrap CSS files-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/shine.css">
+
+    <style media="screen">
+        #lofi-button {
+            padding: 10px;
+            color: white;
+            background-color: #009578;
+            border: 1px solid #000;
+            border-radius: 5 px;
+            cursor: pointer;
+        }
+
+        #lofi-button:hover {
+            background-color: #00b28f;
+        }
+
+        #lofi-text{
+            margin-left: 10px;
+            font-family: sans-serif;
+            color: #aaa;
+        }
+    </style>
+
+    <style>
+        .button {
+            position: relative;
+            background: url(hubble.jpg) no-repeat;
+            border: none;
+            font-size: 28px;
+            color: #FFFFFF;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+  
+        .button:after {
+            content: "";
+            background: #f1f1f1;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 3.0s
+        }
+  
+        .button:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+
+        .bg{
+            background: url(hubble.jpg) no-repeat !important;
+            cursor: pointer;
+            border: none;
+            border-radius: 10%;
+            padding: 20px 50px;
+            font-size: 50px;
+        }
+    </style>
+
+    <style type="text/css">
+        .bg{
+            background: url(hubble.jpg) no-repeat;
+            cursor: pointer;
+            border: none;
+            border-radius: 10%;
+            padding: 20px 50px;
+            font-size: 50px;
+            
+    }
+    </style>
+
+</head>
+    <body>    
+
+        <!--practice
+        <input type="file" id="real-file" hidden="hidden"/>
+        <button type="button" id="custom-button">CHOOSE A FILE</button>
+        <span id="custom-text">No file chosen yet.</span>
+        
+    -->
+
+        <button type="button" class="button" >LOFI-FY</button>
+
+        <button class="bg" class="button">LOFI-FY</button>
+
+        <form>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">choose an mp3 file</label>
+            </div>
+        </form>
+ 
+ 
+    <!-- jQuery Javascript Library (required by Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- jQuery UI Library (optional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   
+    <!-- Bootstrap Library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!--
+    <script type="text/javascript">
+        const realFileButton = document.getElementById("real-file");
+        const customButton = document.getElementById("custom-button");
+        const customText = document.getElementById("custom-text");
+    
+        customButton.addEventListener("click", function(){
+            realFileButton.click();
+        })
+    </script>
+-->
+
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+    </script>
+
+   </body>
+</html>
