@@ -11,112 +11,17 @@
     <!-- Bootstrap CSS files-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="css/shine.css">
-
-    <style media="screen">
-        #lofi-button {
-            padding: 10px;
-            color: white;
-            background-color: #009578;
-            border: 1px solid #000;
-            border-radius: 5 px;
-            cursor: pointer;
-        }
-
-        #lofi-button:hover {
-            background-color: #00b28f;
-        }
-
-        #lofi-text{
-            margin-left: 10px;
-            font-family: sans-serif;
-            color: #aaa;
-        }
-    </style>
-
+    <!--get rid of scroll bar-->
     <style>
-        .button {
-            position: relative;
-            background: url(hubble.jpg) no-repeat;
-            border: none;
-            font-size: 28px;
-            color: #FFFFFF;
-            padding: 20px;
-            width: 200px;
-            text-align: center;
-            transition-duration: 0.4s;
-            text-decoration: none;
-            overflow: hidden;
-            cursor: pointer;
-        }
-  
-        .button:after {
-            content: "";
-            background: #f1f1f1;
-            display: block;
-            position: absolute;
-            padding-top: 300%;
-            padding-left: 350%;
-            margin-left: -20px !important;
-            margin-top: -120%;
-            opacity: 0;
-            transition: all 3.0s
-        }
-  
-        .button:active:after {
-            padding: 0;
-            margin: 0;
-            opacity: 1;
-            transition: 0s
-        }
-    </style>
-
-    <style>
-        .bg{
-            background: url(lofi.jpeg) no-repeat;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            border-radius: 10%;
-            background-size: 100%;
-            height: 750px;
-            width: 1333px;
-        }
-    </style>
-
-    <style>
-        .clickdown {
-            display: inline-block;
-            height: 750px;
-            width: 1333px;
-            cursor: pointer;
-            outline: none;
-            color: #fff;
-            background: url(lofi.jpeg) no-repeat;
-            border: none;
-            border-radius: 10%;
-            box-shadow: 0 50px #999;
-        }
-    
-        .clickdown:hover {background-color: #3e8e41}
-    
-        .clickdown:active {
-            background-color: #3e8e41;
-            box-shadow: 0 5px #666;
-            outline: none;
-            transform: translateY(10px);
+        body { 
+            padding-right: 0px !important;
+            overflow-y: hidden !important;
         }
     </style>
 
 </head>
-    <body>    
+    <body class="body">    
 
-        <!--practice
-        <input type="file" id="real-file" hidden="hidden"/>
-        <button type="button" id="custom-button">CHOOSE A FILE</button>
-        <span id="custom-text">No file chosen yet.</span>
-        
-    -->
 
     <div class="container-fluid">
         <div class="row justify-content-md-center">
