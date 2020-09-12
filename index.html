@@ -69,27 +69,43 @@
             opacity: 1;
             transition: 0s
         }
+    </style>
 
+    <style>
         .bg{
-            background: url(hubble.jpg) no-repeat !important;
+            background: url(lofi.jpeg) no-repeat;
             cursor: pointer;
             border: none;
+            outline: none;
             border-radius: 10%;
-            padding: 20px 50px;
-            font-size: 50px;
+            background-size: 100%;
+            height: 750px;
+            width: 1333px;
         }
     </style>
 
-    <style type="text/css">
-        .bg{
-            background: url(hubble.jpg) no-repeat;
+    <style>
+        .clickdown {
+            display: inline-block;
+            height: 750px;
+            width: 1333px;
             cursor: pointer;
+            outline: none;
+            color: #fff;
+            background: url(lofi.jpeg) no-repeat;
             border: none;
             border-radius: 10%;
-            padding: 20px 50px;
-            font-size: 50px;
-            
-    }
+            box-shadow: 0 50px #999;
+        }
+    
+        .clickdown:hover {background-color: #3e8e41}
+    
+        .clickdown:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            outline: none;
+            transform: translateY(10px);
+        }
     </style>
 
 </head>
@@ -102,9 +118,7 @@
         
     -->
 
-        <button type="button" class="button" >LOFI-FY</button>
-
-        <button class="bg" class="button">LOFI-FY</button>
+        
 
         <!--upload mp3-->
         <form>
@@ -125,6 +139,8 @@
               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Must fall between x and y">
             </div>
           </form>
+
+          <button class="clickdown"></button>
  
     <!-- jQuery Javascript Library (required by Bootstrap) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
