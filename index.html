@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>lo-fi-fy</title>
 
     <!-- Bootstrap CSS files-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -108,6 +108,13 @@
         }
     </style>
 
+    <style>
+        .img{
+            height: 400px;
+            width: 600px;
+        }
+    </style>
+
 </head>
     <body>    
 
@@ -118,29 +125,48 @@
         
     -->
 
-        
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="jumbotron min-vh-100 text-center m-0 bg-white d-flex flex-column justify-content-center">
+                  
+                    <!--title image-->
+                    <p class="lead">
+                        <img src="lofi-white.jpeg" class="img">
+                    </p>
+                    
+                    
+                    <!--upload mp3-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-center">
+                                <form onsubmit="submitForm(); return false;">
+                                    <!--<button class="clickdown"></button>-->
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">choose an mp3 file</label>
+                                    </div>
 
-        <!--upload mp3-->
-        <form>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFile">
-                <label class="custom-file-label" for="customFile">choose an mp3 file</label>
+                                <!--input for bpm and key-->
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput">BPM:</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Must fall between x and y">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2">Key:</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Must fall between x and y">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-        </form>
- 
-        <!--input for bpm and key-->
-        <form>
-            <div class="form-group">
-              <label for="formGroupExampleInput">BPM:</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Must fall between x and y">
-            </div>
-            <div class="form-group">
-              <label for="formGroupExampleInput2">Key:</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Must fall between x and y">
-            </div>
-          </form>
+        </div>
+    </div>  
 
-          <button class="clickdown"></button>
+
  
     <!-- jQuery Javascript Library (required by Bootstrap) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -168,12 +194,14 @@
 -->
 
     <script>
-        // Add the following code if you want the name of the file appear on select
+        //name of the file appear on select
         $(".custom-file-input").on("change", function() {
-      var fileName = $(this).val().split("\\").pop();
-      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-    });
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
     </script>
+
+    <script src="/upload.js"></script>
 
    </body>
 </html>
