@@ -108,13 +108,6 @@
         }
     </style>
 
-    <style>
-        .img{
-            height: 400px;
-            width: 600px;
-        }
-    </style>
-
 </head>
     <body>    
 
@@ -126,39 +119,68 @@
     -->
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-md-center">
             <div class="col-12 p-0">
                 <div class="jumbotron min-vh-100 text-center m-0 bg-white d-flex flex-column justify-content-center">
                   
                     <!--title image-->
                     <p class="lead">
-                        <img src="lofi-white.jpeg" class="img">
+                        <img src="lofi-white-cropped2.jpeg" width="500px" height="250px">
                     </p>
                     
+                    <div class="row justify-content-md-center"></div>
                     
                     <!--upload mp3-->
                     <div class="container">
-                        <div class="row">
-                            <div class="col text-center">
-                                <form onsubmit="submitForm(); return false;">
+                        <div class="row justify-content-md-center">
+                            <div class="col col-lg-6">
+                                <form onsubmit="submitForm(); return false;" id="formdata">
                                     <!--<button class="clickdown"></button>-->
                                     <div class="custom-file">
                                         <input name="music" type="file" class="custom-file-input" id="customFile">
                                         <label class="custom-file-label" for="customFile">choose an mp3 file</label>
                                     </div>
+                                    
+                                    <div class="row">
+                                        <p></p>
+                                    </div>
 
-                                <!--input for bpm and key-->
-                                <div class="input-group">
-                                    <!--<label for="formGroupExampleInput">BPM:</label>-->
-                                    <input name="bpm" type="text" class="form-control" placeholder="bpm ">
-                                    <input name="key" type="text" class="form-control" placeholder="key">
-                                </div>
+                                    <!--input for bpm and key-->
+                                    <div class="row" class="margin-top 3">
+                                        <div class="col">
+                                        <input name="bpm" type="text" class="form-control" placeholder="bpm ">
+                                        </div>
+                                        <div class="col">
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>select key...</option>
+                                            <option value="1">C</option>
+                                            <option value="2">C#/Dd</option>
+                                            <option value="3">D</option>
+                                            <option value="4">D#/Eb</option>
+                                            <option value="5">E</option>
+                                            <option value="6">F</option>
+                                            <option value="7">F#/Gb</option>
+                                            <option value="8">G</option>
+                                            <option value="9">G#/Ab</option>
+                                            <option value="10">A</option>
+                                            <option value="11">A#/Bb</option>
+                                            <option value="12">B</option>
+
+                                        </select>
+                                        </div>
+                                    </div>
+                                  
                                     
                                 </form>
                             </div>
                         </div>
                     </div>
                     
+                    <p><p></p></p>
+                    <p>
+                        <img src="play.jpeg" height="200px" width="200px">
+                    </p>
+
                 </div>
             </div>
         </div>
