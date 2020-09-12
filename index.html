@@ -143,19 +143,17 @@
                                 <form onsubmit="submitForm(); return false;">
                                     <!--<button class="clickdown"></button>-->
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <input name="music" type="file" class="custom-file-input" id="customFile">
                                         <label class="custom-file-label" for="customFile">choose an mp3 file</label>
                                     </div>
 
                                 <!--input for bpm and key-->
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput">BPM:</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Must fall between x and y">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput2">Key:</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Must fall between x and y">
-                                    </div>
+                                <div class="input-group">
+                                    <!--<label for="formGroupExampleInput">BPM:</label>-->
+                                    <input name="bpm" type="text" class="form-control" placeholder="bpm ">
+                                    <input name="key" type="text" class="form-control" placeholder="key">
+                                </div>
+                                    
                                 </form>
                             </div>
                         </div>
