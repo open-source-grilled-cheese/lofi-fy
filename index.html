@@ -110,7 +110,7 @@
                                     <p></p>
                                     <!--<input type="image" src="play.jpg" class="img" width="200px" height="200px"/>-->
                                     <button type="submit" style="border: 0; background: transparent" id="btnsubmit">
-                                        <img src="play.jpg" width="200px" height="200px" alt="submit" />
+                                        <img src="play.jpg" width="200px" height="200px" alt="submit" id="pbutton" />
                                     </button>
 
 
@@ -152,6 +152,9 @@
 	$(document).ready(function () {
 	    $("#formdata").submit(function(e) {
 		$("#btnsubmit").attr("disabled", true);
+		$("#pbutton").attr("src", "wait.gif");
+		$("#pbutton").attr("width", "400px");
+		
 		return true;
 	    });
 	});
