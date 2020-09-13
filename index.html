@@ -49,6 +49,7 @@
         }
     </style>
 
+
 </head>
     <body class="body">    
 
@@ -72,7 +73,7 @@
                                 <form onsubmit="submitForm(); return false;" id="formdata">
                                     <!--<button class="clickdown"></button>-->
                                     <div class="custom-file">
-                                        <input name="music" type="file" class="custom-file-input" id="customFile">
+                                        <input name="music" type="file" accept=".mp3" class="custom-file-input" id="customFile">
                                         <label class="custom-file-label" for="customFile">choose an mp3 file</label>
                                     </div>
                                     
@@ -108,7 +109,7 @@
                                     <p></p>
                                     <p></p>
                                     <!--<input type="image" src="play.jpg" class="img" width="200px" height="200px"/>-->
-                                    <button type="submit" style="border: 0; background: transparent">
+                                    <button type="submit" style="border: 0; background: transparent" id="btnsubmit">
                                         <img src="play.jpg" width="200px" height="200px" alt="submit" />
                                     </button>
 
@@ -144,6 +145,16 @@
             var fileName = $(this).val().split("\\").pop();
             $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
         });
+    </script>
+
+    <script>
+	// kill button
+	$(document).ready(function () {
+	    $("#formdata").submit(function(e) {
+		$("#btnsubmit").attr("disabled", true);
+		return true;
+	    });
+	});
     </script>
 
     <script src="/upload.js"></script>
