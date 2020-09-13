@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Metadata for the Webpage -->
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lo-fi-fy</title>
+
+    <!-- Bootstrap CSS files-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta&display=swap">
+
+    <link rel="icon" href="lofi-icon.png">
+
+    <!--get rid of scroll bar-->
+    <style>
+        body { 
+            padding-right: 0px !important;
+            overflow-y: hidden !important;
+        }
+    </style>
+
+    <style>
+        button {
+            opacity: 1.0;
+            filter: alpha(opacity=40);
+        }
+    
+        button:hover {
+            opacity: 0.6;
+            filter: alpha(opacity=100);
+        }
+
+        button:focus{
+            outline: none;
+        }
+    </style>
+
+
+    <!--font-->
+    <style>
+        body {
+          font-family: "Mukta";
+          font-size: 16px;
+        }
+    </style>
+
+
+</head>
+    <body class="body">    
+
+
+    <div class="container-fluid">
+        <div class="row justify-content-md-center">
+            <div class="col-12 p-0">
+                <div class="jumbotron min-vh-100 text-center m-0 bg-white d-flex flex-column justify-content-center">
+                  
+                    <!--title image-->
+                    <p class="lead">
+                        <img src="lofi-white.jpeg" width="500px" height="250px">
+                    </p>
+                   
+                    <div class="row justify-content-md-center"></div>
+                    
+                    <!--upload mp3-->
+                    <div class="container">
+                        <div class="row justify-content-md-center">
+                            <div class="col col-lg-6">
+                                <form onsubmit="submitForm(); return false;" id="formdata">
+                                    <!--<button class="clickdown"></button>-->
+                                    <div class="custom-file">
+                                        <input name="music" type="file" accept=".mp3" class="custom-file-input" id="customFile" required>
+                                        <label class="custom-file-label" for="customFile">choose an mp3 file</label>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <p></p>
+                                    </div>
+
+                                    <!--input for bpm and key-->
+                                    <div class="row" class="margin-top 3">
+                                        <div class="col">
+						<input name="bpm" type="text" class="form-control" style="text-align:center;" placeholder="your song's bpm (ex. 120)" required>
+                                        </div>
+                                    </div>     
+                                    
+                                    <p></p>
+                                    <p></p>
+                                    <!--<input type="image" src="play.jpg" class="img" width="200px" height="200px"/>-->
+                                    <button type="submit" style="border: 0; background: transparent" id="btnsubmit">
+                                        <img src="play.jpg" width="200px" height="200px" alt="submit" id="pbutton" />
+                                    </button>
+
+
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>                                                    
+            </div>
+        </div>
+    </div>  
+
+
+ 
+    <!-- jQuery Javascript Library (required by Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- jQuery UI Library (optional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   
+    <!-- Bootstrap Library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+        //name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+
+    <script>
+	// kill button
+	$(document).ready(function () {
+	    $("#formdata").submit(function(e) {
+		$("#btnsubmit").attr("disabled", true);
+		$("#pbutton").attr("src", "wait.gif");
+		$("#pbutton").attr("width", "400px");
+		
+		return true;
+	    });
+	});
+    </script>
+
+    <script src="/upload.js"></script>
+
+   </body>
+</html>
